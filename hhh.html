@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>
+		hhh
+	</title>
+	</head>
+	<body> 
+		<div>
+			<p id="pp">This element's width property is not set… This element's width property is not set This element's width property is not set This element's width property is not set This element's width property is not set This element's width property is not set</p>
+		<!-- 	<p id="djdl4">This element's width property is not set… This element's width property is not set This element's width property is not set This element's width property is not set This element's width property is not set This element's width property is not set</p> -->
+		</div>
+		<script>
+			var PageHandler = { 
+				id: "123456", 
+				init: function() { 
+					console.log(this)
+					document.addEventListener("click", function(event) { 
+						console.log(this)
+						this.doSomething(event.type); // 错误 
+					}, false); 
+				},
+				doSomething: function(type) { 
+					console.log("Handling " + type + " for " + this.id); 
+				} 
+			};
+			PageHandler.init()
+			console.log(this)
+		</script>
+	 	 
+	</body>
+	<style>
+		div {
+			width: 600px;
+			height: 300px;
+			border: solid black;
+			display: table;
+		}
+/*		#djdl {
+			width: 300px;
+			display: table-cell;
+			vertical-align: middle;
+			
+			height: 150px;
+			border: solid red;
+			background-color: yellow;
+
+		}*/
+		#pp {
+			/*width: 300px;*/
+			display: table-cell;
+			/**display: inline-block;*/
+			vertical-align: middle;
+			
+			/*height: 150px;*/
+			border: solid red;
+			background-color: white;
+		}
+	</style>
+</html>
